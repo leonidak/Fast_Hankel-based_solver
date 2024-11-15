@@ -25,7 +25,7 @@ detector_radius = 1.    # in meters
 speed_of_sound  = 1.      # meters per second
 sampling_rate   = 768./6.     # samples per second
 nsamples        = 769
-ndet      = 1024       # in this examples there are 256 detectors spaced over 270 degrees. Will need to add more zero detectors to cover  360 degrees.
+ndet      = 1024       # in this examples there are 1024 detectors spaced over 360 degrees, but some are set to 0. 
 
 namedata  ='partial_measmnts.npy'   # file with the data
 
