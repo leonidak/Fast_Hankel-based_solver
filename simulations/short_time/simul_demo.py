@@ -1,6 +1,6 @@
 # ----------------------------------------
 #  This is a demo file illustrating the use of the "fast inverse" module
-#   for reconstructing an image from a real mouse scan
+#  on simulated data
 #
 # -----------------------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ print('rad_corr=',rad_corr)
 
 time_step =      1./sampling_rate              # time step of measurements
 t_measured      = time_step*(nsamples-1)        # this is total measurement time
-
+print('t_measured = ',t_measured)
 
 # ----------------------------------------------- read the mouse data and transpose the matrix
 data = npyread(namedata)
