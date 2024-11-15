@@ -3,7 +3,7 @@ import numpy as np
 import scipy as sp
 import math
 import time
-from utils import t6hat, sin6hat
+# from utils import t6hat, sin6hat
 
 # --------- define polar coordinate transformation, readgeom, readinverse and prepare_hankels routines
 
