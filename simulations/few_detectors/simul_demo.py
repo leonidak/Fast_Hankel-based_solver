@@ -1,6 +1,6 @@
 # ----------------------------------------
 #  This is a demo file illustrating the use of the "fast inverse" module
-#   for reconstructing an image from a real mouse scan
+# on simulated data
 #
 # -----------------------------------------------------------------------------------------------
 import sys
