@@ -6,20 +6,8 @@
 import sys
 sys.path.append("..")
 import numpy as np
-from utils import ndwrite
+from utils import npyread
 from fastmod import fast_inverse_mod
-
-def npyread(fpath):
-   data = np.load(fpath)
-   arr = np.zeros((2,2))
-
-   if(type(data) != type(arr)):
-      print(fpath+'is not a 2D array !')
-      print('Shutting down !')
-   return data
-
-
-
 
 
 #-----------------------------------------------------------------------------------------------------
