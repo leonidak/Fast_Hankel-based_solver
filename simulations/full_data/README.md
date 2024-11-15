@@ -1,39 +1,27 @@
-## Mouse_demo
+## simul_demo
 
 
 This scripts illustrates the work of the function **fast_inverse_mod()**
+with simulated data.
 
-The data is read from the file **mouse_data_real.npy**
+The data is read from the file **measurements.npy**
 
-These data have been acquired by a photoacoustic scanner MSOT inVision-256TF,
-scanning a section of a live mouse. Data courtesy of Cancer Research UK Cambridge Institute.
+These data have been simulated, using the image contained in
+the file **ground_truth.npy** using a spectral FFT solver.
 
+The radius of the domain and the speed of sound are both 1.
 
-The scanner has 256 detectors uniformly spread over 270 degrees arc of
-a circle of radius 40.5 mm.  In order to supply a full circle of detectors
-required by the algorithm, the data are zero-paded by additional zero-value
-"detectors" to the total number of 340 detectors. Additionaly, the detectors
-are rotated, so that the "zero" gap is centered on the left of the
-reconstruction domain (i.e. at 9pm). This allows for image correction
-with **lhalf** = 4.
+The simulated measurements run for 6 units of time.
 
+The number of simulated detectors is 1024; they are uniformly
+spread over a unit circle.
 
-The total acquisition time is shorter than ideal. When rescaled
-to the problem with sound speed one on a unit circle, the rescaled
-time interval is 1.91. Ideally it should be greater than 2.
-This leads to circular artifacts on the periphery of the reconstructed
-*(759 x 759)* image. However, since it is apriory knownthat the mouse occupies
-only the center of the image, a smaller sub-image of size *(300 x 300)*
-is extracted and used.
+Parameter **lhalf** is set to 0, so no additional correction
+is done.
 
-In this demo, the **fast_inverse_mod()** is called three times
-with the same data, for timing purposes. During the first call,
-a global variable **hankels** is pre-computed, containing a set of
-values of Hankel functions. On the two consecutive runs,
-the module re-uses the previously computed values, which results
-in faster computation times.
+The resulting image is stored in the file **reconstruction.npy**
 
-
-
-
+If everything is working properly, the maximum difference between
+the images in **reconstruction.npy** and **ground_truth.npy**
+should be about 0.018, i.e. 1.8% in the *L*-infinity norm
 
