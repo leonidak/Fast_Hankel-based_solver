@@ -123,7 +123,7 @@ script with different geometry parameters is disallowed.
 There are several examples of the use of the module, presented in the
 subfolders.
 
-Subfolder \simulations has five subfolders with reconstructions from simulated
+Subfolder \simulations has six subfolders with reconstructions from simulated
 data. See README files in these subfolders.
 
 Subfolder \mouse contains an image reconstruction from real data courtesy
